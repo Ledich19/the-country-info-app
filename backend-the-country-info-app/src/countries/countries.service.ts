@@ -120,7 +120,7 @@ export class CountriesService {
       this.getCountryBorders(countryCode),
       this.getCountriesFlags(countryCode),
     ]);
-
+    // I made it separately so as not to search by country name, I think this is wrong.
     const countryPopulation = await this.getCountriesPopulation(
       countryData[1]?.iso3 ?? ""
     );
