@@ -3,8 +3,8 @@ import {
   IsArray,
   ValidateNested,
   IsISO31661Alpha2,
-} from 'class-validator';
-import { Type } from 'class-transformer';
+} from "class-validator";
+import { Type } from "class-transformer";
 
 export class CountryBorderDto {
   @IsString()

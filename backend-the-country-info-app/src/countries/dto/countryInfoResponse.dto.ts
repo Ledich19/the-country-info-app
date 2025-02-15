@@ -3,10 +3,10 @@ import {
   IsArray,
   ValidateNested,
   IsISO31661Alpha2,
-} from 'class-validator';
-import { Type } from 'class-transformer';
-import { CountryBorderDto } from './countryBorder.dto';
-import { PopulationCountsDto } from './populationCounts.dto';
+} from "class-validator";
+import { Type } from "class-transformer";
+import { CountryBorderDto } from "./countryBorder.dto";
+import { PopulationCountsDto } from "./populationCounts.dto";
 
 export class CountryInfoResponseDto {
   @IsString()

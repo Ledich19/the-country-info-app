@@ -3,9 +3,9 @@ import {
   IsISO31661Alpha3,
   IsArray,
   ValidateNested,
-} from 'class-validator';
-import { Type } from 'class-transformer';
-import { PopulationCountsDto } from './populationCounts.dto';
+} from "class-validator";
+import { Type } from "class-transformer";
+import { PopulationCountsDto } from "./populationCounts.dto";
 
 export class CountryPopulationItemDto {
   @IsString()

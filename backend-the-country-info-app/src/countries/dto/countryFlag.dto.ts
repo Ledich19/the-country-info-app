@@ -3,7 +3,7 @@ import {
   IsISO31661Alpha2,
   IsISO31661Alpha3,
   IsUrl,
-} from 'class-validator';
+} from "class-validator";
 
 export class CountryFlagDto {
   @IsString()

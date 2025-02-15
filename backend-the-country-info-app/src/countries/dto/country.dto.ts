@@ -1,4 +1,4 @@
-import { IsString, IsISO31661Alpha2 } from 'class-validator';
+import { IsString, IsISO31661Alpha2 } from "class-validator";
 
 export class CountryDto {
   @IsISO31661Alpha2()

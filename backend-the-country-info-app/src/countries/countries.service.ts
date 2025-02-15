@@ -1,16 +1,17 @@
 import { Injectable } from "@nestjs/common";
-import { CountryPopulationResponseDto } from "./dto/countryPopulationResponse.dto";
-import { CountriesFlagsResponseDto } from "./dto/countriesFlagsResponse.dto";
+import { CountryPopulationDataDto } from "./dto/countryPopulationData.dto";
+import { CountriesFlagsDataDto } from "./dto/countriesFlagsData.dto";
 import { CountryPopulationItemDto } from "./dto/countryPopulationItem.dto";
 import { CountryInfoResponseDto } from "./dto/countryInfoResponse.dto";
 import { CountryDto } from "./dto/country.dto";
-import { CountryBordersDataDto } from "./dto/countryBordersResponse.dto";
+import { CountryBordersDataDto } from "./dto/countryBordersData.dto";
 import { CountryFlagDto } from "./dto/countryFlag.dto";
 import { ConfigService } from "@nestjs/config";
 
 @Injectable()
 export class CountriesService {
   constructor(private readonly configService: ConfigService) {}
+
   private readonly BASE_NAGER_URL: string =
     this.configService.get("BASE_NAGER_URL") ?? "";
   private readonly BASE_COUNTRIESNOW_URL: string =
@@ -68,7 +69,7 @@ export class CountriesService {
       }
 
       const { error, data, msg } =
-        (await response.json()) as CountryPopulationResponseDto;
+        (await response.json()) as CountryPopulationDataDto;
 
       if (error) {
         throw new Error(msg);
@@ -95,8 +96,8 @@ export class CountriesService {
         throw new Error("Failed to fetch data");
       }
 
-      const { error, data, msg }: CountriesFlagsResponseDto =
-        (await response.json()) as CountriesFlagsResponseDto;
+      const { error, data, msg }: CountriesFlagsDataDto =
+        (await response.json()) as CountriesFlagsDataDto;
 
       if (error) {
         throw new Error(msg);
